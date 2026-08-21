@@ -1,6 +1,5 @@
-// app/(public)/contacto/page.tsx
 'use client';
-import { useLanguage } from '@/components/LanguageContext';
+import { useLanguage } from '../../../components/LanguageContext';
 
 export default function Contacto() {
   const { t } = useLanguage();
@@ -62,17 +61,10 @@ export default function Contacto() {
 
             <div>
               <label className="block text-[10px] font-bold uppercase tracking-widest text-[#8C7A6B] mb-2">{t('ct.details')}</label>
-              <textarea 
-                rows={4} 
-                className="w-full border-b border-[#EBE3D5] py-3 bg-transparent text-sm focus:outline-none focus:border-[#3A332C] transition-colors resize-none" 
-                placeholder={t('ct.placeholder')}
-              ></textarea>
+              <textarea rows={4} className="w-full border-b border-[#EBE3D5] py-3 bg-transparent text-sm focus:outline-none focus:border-[#3A332C] transition-colors resize-none" placeholder={t('ct.placeholder')}></textarea>
             </div>
 
-            <button 
-              type="button" 
-              className="w-full bg-[#3A332C] text-[#FAF8F5] uppercase tracking-widest text-xs font-bold py-5 hover:bg-[#2a241e] transition-colors duration-300 mt-4"
-            >
+            <button type="button" className="w-full bg-[#3A332C] text-[#FAF8F5] uppercase tracking-widest text-xs font-bold py-5 hover:bg-[#2a241e] transition-colors duration-300 mt-4">
               {t('ct.submit')}
             </button>
           </form>

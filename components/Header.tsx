@@ -1,4 +1,3 @@
-// components/Header.tsx
 'use client';
 import Link from 'next/link';
 import { useLanguage } from './LanguageContext';
@@ -28,20 +27,14 @@ export default function Header() {
             </Link>
             
             <div className="flex items-center space-x-2 border-l border-[#EBE3D5] pl-6 ml-2">
-              <button 
-                onClick={() => setLang('pt')} 
-                className={`text-xs transition-colors ${lang === 'pt' ? 'font-bold text-[#3A332C]' : 'text-[#8C7A6B] hover:text-[#3A332C]'}`}
-              >
-                PT
-              </button>
+              <button onClick={() => setLang('pt')} className={`text-xs transition-colors ${lang === 'pt' ? 'font-bold text-[#3A332C]' : 'text-[#8C7A6B] hover:text-[#3A332C]'}`}>PT</button>
               <span className="text-[#EBE3D5]">|</span>
-              <button 
-                onClick={() => setLang('en')} 
-                className={`text-xs transition-colors ${lang === 'en' ? 'font-bold text-[#3A332C]' : 'text-[#8C7A6B] hover:text-[#3A332C]'}`}
-              >
-                EN
-              </button>
+              <button onClick={() => setLang('en')} className={`text-xs transition-colors ${lang === 'en' ? 'font-bold text-[#3A332C]' : 'text-[#8C7A6B] hover:text-[#3A332C]'}`}>EN</button>
             </div>
+
+            <Link href="/login" className="ml-6 px-5 py-3 border border-[#EBE3D5] text-[10px] uppercase tracking-widest font-bold text-[#3A332C] hover:bg-[#3A332C] hover:text-[#FAF8F5] transition-all duration-300">
+              {t('nav.login')}
+            </Link>
           </nav>
         </div>
       </div>

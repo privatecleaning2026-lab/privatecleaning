@@ -1,6 +1,5 @@
-// app/(public)/servicos/page.tsx
 'use client';
-import { useLanguage } from '@/components/LanguageContext';
+import { useLanguage } from '../../../components/LanguageContext';
 
 export default function Servicos() {
   const { t } = useLanguage();

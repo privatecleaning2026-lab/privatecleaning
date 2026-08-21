@@ -1,7 +1,6 @@
-// app/(public)/layout.tsx
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { LanguageProvider } from '@/components/LanguageContext';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { LanguageProvider } from '../../components/LanguageContext';
 
 export default function PublicLayout({ children }: { children: React.ReactNode }) {
   return (

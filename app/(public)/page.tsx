@@ -1,6 +1,5 @@
-// app/(public)/page.tsx
 'use client';
-import { useLanguage } from '@/components/LanguageContext';
+import { useLanguage } from '../../components/LanguageContext';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -8,7 +7,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#FAF8F5] text-[#3A332C]">
       <section className="relative flex flex-col items-center justify-center min-h-[85vh] px-4 text-center">
-        {/* Nova imagem com fundo clássico e overlay escuro para leitura */}
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
         <div className="absolute inset-0 bg-black/50"></div>
         
@@ -20,10 +18,7 @@ export default function Home() {
           <p className="max-w-2xl text-lg text-gray-200 mb-12 font-light leading-relaxed">
             {t('home.desc')}
           </p>
-          <a 
-            href="/contacto" 
-            className="bg-[#3A332C] text-[#FAF8F5] px-12 py-5 uppercase tracking-widest text-xs font-semibold hover:bg-[#2a241e] shadow-lg transition-all duration-300 border border-[#4A423C]"
-          >
+          <a href="/contacto" className="bg-[#3A332C] text-[#FAF8F5] px-12 py-5 uppercase tracking-widest text-xs font-semibold hover:bg-[#2a241e] shadow-lg transition-all duration-300 border border-[#4A423C]">
             {t('home.cta')}
           </a>
         </div>
